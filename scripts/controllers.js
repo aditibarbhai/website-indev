@@ -1,16 +1,5 @@
 'use strict';
 
-mySite.directive("commonHeader", function () {
-  return {
-    restrict: 'E',
-    transclude: true,
-    scope: {
-      'close': '&onClose'
-    },
-    templateUrl: 'header.html'
-  };
-});
-
 mySite.controller('HomeController', ['$scope', function($scope) {
   $scope.title = "Hello,";
   $scope.photoUrl = "images/coco.jpg";
@@ -32,10 +21,6 @@ mySite.controller('HomeController', ['$scope', function($scope) {
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".home-page").addClass("selected");
-  // angular.element(document).ready( 
-  //   function() {
-  //     componentHandler.upgradeAllRegistered();
-  // });
 }]);
 
 mySite.controller('ProjectsController', ['$scope', function($scope) {
@@ -51,10 +36,6 @@ mySite.controller('ProjectsController', ['$scope', function($scope) {
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".projects-page").addClass("selected");
-  // angular.element(document).ready( 
-  //   function() {
-  //     componentHandler.upgradeAllRegistered();
-  // });
 }]);
 
 mySite.controller("ProjectDetailsController", ['$scope', '$routeParams', function($scope, $routeParams) {
@@ -66,10 +47,6 @@ mySite.controller("ProjectDetailsController", ['$scope', '$routeParams', functio
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".projects-page").addClass("selected");
-  // angular.element(document).ready( 
-  //   function() {
-  //     componentHandler.upgradeAllRegistered();
-  // });
 }]);
 
 mySite.controller('ResumeController', ['$scope', function($scope) {
@@ -77,10 +54,6 @@ mySite.controller('ResumeController', ['$scope', function($scope) {
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".resume-page").addClass("selected");
-  // angular.element(document).ready( 
-  //   function() {
-  //     componentHandler.upgradeAllRegistered();
-  // });
 }]);
 
 mySite.controller('ContactController', ['$scope', function($scope) {
@@ -88,8 +61,4 @@ mySite.controller('ContactController', ['$scope', function($scope) {
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".contact-page").addClass("selected");
-  // angular.element(document).ready( 
-  //   function() {
-  //     componentHandler.upgradeAllRegistered();
-  // });
 }]);

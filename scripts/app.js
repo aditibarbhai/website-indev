@@ -37,3 +37,11 @@ mySite.run(function ($rootScope,$timeout) {
 	  })
 	})
 });
+
+// mySite.run(function(){ 
+// 	angular.element(document).ready( 
+// 		function() {
+// 		  componentHandler.upgradeAllRegistered();
+// 		}
+// 	);
+// });
