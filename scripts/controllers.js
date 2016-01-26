@@ -27,12 +27,12 @@ mySite.controller('ProjectsController', ['$scope', function($scope) {
   $scope.title = "Projects";
   $scope.projects = [];
 
-  // $.getJSON("portfolio/portfolio.json.txt", function(data) {
-  //   var projects = data.projects;
-  //   $.each(projects, function(i, val) {
-  //     $scope.projects.push(val);
-  //   });
-  // });
+  $.getJSON("projects/portfolio.json.txt", function(data) {
+    var projects = data.projects;
+    $.each(projects, function(i, val) {
+      $scope.projects.push(val);
+    });
+  });
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".projects-page").addClass("selected");
@@ -41,9 +41,9 @@ mySite.controller('ProjectsController', ['$scope', function($scope) {
 mySite.controller("ProjectDetailsController", ['$scope', '$routeParams', function($scope, $routeParams) {
   var id = $routeParams.id;
   $scope.project = {};
-  // $.getJSON("portfolio/portfolioDetails.json.txt", function(data) {
-  //     $scope.project = data.projectDetails[id];
-  // });
+  $.getJSON("projects/portfolioDetails.json.txt", function(data) {
+      $scope.project = data.projectDetails[id];
+  });
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".projects-page").addClass("selected");

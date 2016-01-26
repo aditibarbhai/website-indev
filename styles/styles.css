@@ -675,7 +675,7 @@ body .blog {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  /*background-color: white;*/
   box-sizing: border-box;
 }
 
