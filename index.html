@@ -1,49 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ng-app="mySite" lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A website for Aditi Barbhai">
+	<title>Aditi Barbhai</title>
+    <meta name="description" content="Aditi Barbhai's website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aditi Barbhai</title>
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-    <link href="styles/fonts/roboto.css" rel="stylesheet" type="text/css" />
-    <link href="styles/fonts/pacifico.css" rel="stylesheet" type="text/css"/>
-    <link href="styles/fonts/material-icons.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="styles/material.min.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <div class="blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <!-- class="layout mdl-layout mdl-layout--fixed-header mdl-js-layout" -->
-      <!--[if lt IE 9]>
-          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
-      <common-header></common-header>
-      <div class="wrapper" ng-view></div>
-      <common-footer></common-footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <!-- <script src="scripts/vendor/angular.js"></script> -->
-    <script src="scripts/vendor/angular-route.min.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers.js"></script>
-    <script src="scripts/directives.js"></script>
+    
+    <!-- Styles -->
+	<link rel="stylesheet" href="styles/vendor/material.indigo-pink.min.css" />
+	<link rel="stylesheet" href="styles/fonts/material-icons.css" />
+    <link rel="stylesheet" href="styles/fonts/material-icons.css" />
+    <link rel="stylesheet" href="styles/fonts/pacifico.css" />
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+    
+    <!-- API Scripts -->
     <script src="scripts/vendor/material.min.js"></script>
-  </body>
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <!-- Always shows a header, even in smaller screens. -->
+        <!--Header-->
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Title</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. Hidden in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="#/home">Home</a>
+                <a class="mdl-navigation__link" href="#/portfolio">P</a>
+                <a class="mdl-navigation__link" href="#/resume">R</a>
+                <a class="mdl-navigation__link" href="#/contact">C</a>
+                <a class="mdl-navigation__link" href="#/blog">B</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#/home">Home</a>
+                <a class="mdl-navigation__link" href="#/portfolio">P</a>
+                <a class="mdl-navigation__link" href="#/resume">R</a>
+                <a class="mdl-navigation__link" href="#/contact">C</a>
+                <a class="mdl-navigation__link" href="#/blog">B</a>
+            </nav>
+        </div>
+        <!--/ End of Header-->
+        
+        <!--View-->
+        <div class="wrapper" ng-view></div>
+        
+        <!--Footer-->
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">&copy; First Last</div>
+            <ul class="mdl-mini-footer__link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy & Terms</a></li>
+            </ul>
+            </div>
+        </footer>
+        <!--/ End of Footer-->
+        
+        <!--Scripts-->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="scripts/vendor/angular.js"></script>
+        <script src="scripts/vendor/angular-route.min.js"></script>        
+        <script src="scripts/vendor/angular-resource.min.js"></script>        
+        <script src="scripts/app.js"></script>
+        <script src="scripts/services.js"></script>
+        <script src="home/home.js"></script>
+        <script src="portfolio/portfolio.js"></script>
+        <script src="resume/resume.js"></script>
+        <script src="contact/contact.js"></script>
+    </div>
+</body>
 </html>

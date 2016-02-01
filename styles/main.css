@@ -1,0 +1,60 @@
+.handwriting {
+  font-family: Pacifico, Arial, Helvetica, sans-serif;
+}
+.mdl-layout__container {
+  background-color: #DDE0F3;
+}
+.center {
+  text-align: center;
+}
+header .mdl-navigation .mdl-navigation__link:hover {
+  border-bottom: 3px solid yellow;
+}
+footer {
+  margin-top: 8vh;
+}
+.wrapper {
+  margin: 0 auto;
+}
+.wrapper .mdl-layout__content .back {
+  margin-top: 5vh;
+  position: fixed;
+  left: 7vw;
+}
+.wrapper .mdl-layout__content .ribbon {
+  width: 100vw;
+  height: 40vh;
+  background-color: #3F51B5;
+}
+.wrapper .mdl-layout__content .page-content {
+  margin: 0 auto;
+}
+.wrapper .mdl-layout__content .letter {
+  width: 65vw;
+  background-color: #fff;
+  padding: 80px 60px;
+  margin-top: -33vh;
+}
+.wrapper .mdl-layout__content .mdl-grid {
+  width: 65vw;
+}
+.wrapper .mdl-layout__content .mdl-grid .mdl-card__media {
+  background-color: lightgrey;
+  min-height: 35vh;
+  position: relative;
+}
+.wrapper .mdl-layout__content .mdl-grid .mdl-card__media h3 {
+  margin-left: 1vw;
+  position: absolute;
+  bottom: 0;
+}
+.wrapper .mdl-layout__content .blog__posts .mdl-card__media {
+  min-height: 50vh !important;
+}
+.wrapper .mdl-layout__content .blog__posts .mdl-card__media h3 {
+  background-color: #dde0f3;
+  padding: 0 7px;
+}
+.wrapper .mdl-layout__content .blog__posts .content {
+  padding: 50px;
+}

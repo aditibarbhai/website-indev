@@ -1,7 +1,0 @@
-{
-	"projects" : [
-		{ 
-			"title" : "Catch the Monster", "desc" : "This is an HTML5 game I created that uses...", "image" : { "url" : "images/catch-the-monster.png", "alt" : "Catch the monster, HTML5 game" } 
-		}
-	]
-}

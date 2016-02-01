@@ -1,47 +1,32 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var mySite = angular.module('mySite', ['ngRoute']);
+var mySite = angular.module('mySite', ['ngRoute', 'mySiteServices']);
 
+// define routes 
 mySite.config(['$routeProvider', function($routeProvider) {
   	$routeProvider
 	.when('/home', {
-	    templateUrl : 'views/home.html',
+	    templateUrl : 'home/home.html',
 	    controller  : 'HomeController'
 	})
-	.when('/projects', {
-	    templateUrl : 'views/projects.html',
-	    controller  : 'ProjectsController'
+	.when('/portfolio', {
+	    templateUrl : 'portfolio/portfolio.html',
+	    controller  : 'PortfolioController'
 	})
-	.when('/projects/:id', {
-	    templateUrl : "views/entry.html",
+	.when('/portfolio/:id', {
+	    templateUrl : "portfolio/project.html",
 	    controller  : 'ProjectDetailsController'
 	})
 	.when('/resume', {
-	    templateUrl : 'views/resume.html',
+	    templateUrl : 'resume/resume.html',
 	    controller  : 'ResumeController'
 	})
 	.when('/contact', {
-	    templateUrl : 'views/contact.html',
+	    templateUrl : 'contact/contact.html',
 	    controller  : 'ContactController'
 	})
 	.otherwise({
 		redirectTo: "/home"
 	});
 }]);
-
-mySite.run(function ($rootScope,$timeout) {
-	$rootScope.$on('$viewContentLoaded', ()=> {
-	  $timeout(() => {
-	    componentHandler.upgradeAllRegistered();
-	  })
-	})
-});
-
-// mySite.run(function(){ 
-// 	angular.element(document).ready( 
-// 		function() {
-// 		  componentHandler.upgradeAllRegistered();
-// 		}
-// 	);
-// });
