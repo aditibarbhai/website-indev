@@ -17,7 +17,6 @@ mySiteServices.factory('PortfolioService', [function() {
     }
 
     var getProject = function(id){
-        console.log(projectsList[id]);
         return projectsList[id];
     };
     

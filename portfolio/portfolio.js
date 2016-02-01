@@ -6,9 +6,10 @@ mySite.controller('PortfolioController', ['$scope', 'PortfolioService', function
     $(".projects-page").addClass("selected");
 }]);
 
-mySite.controller("ProjectDetailsController", ['$scope', 'PortfolioService', '$routeParams', function($scope, PortfolioService, $routeParams) {
+mySite.controller("ProjectDetailsController", ['$scope', '$sce', 'PortfolioService', '$routeParams', function($scope, $sce, PortfolioService, $routeParams) {
   var id = $routeParams.id;
   $scope.project = PortfolioService.getProject(id);
+  $scope.content = $sce.trustAsHtml($scope.project.content);
 
   $(".mdl-navigation").children().removeClass("selected");
   $(".projects-page").addClass("selected");
