@@ -18,5 +18,5 @@ mySite.controller('HomeController', ['$scope', function($scope) {
   ];
 
   $(".mdl-navigation").children().removeClass("selected");
-  $(".home-page").addClass("selected");
+  $(".home-link").addClass("selected");
 }]);

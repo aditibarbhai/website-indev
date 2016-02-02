@@ -27,3 +27,20 @@ mySiteServices.factory('PortfolioService', [function() {
         getProject: getProject
     };
  }]);
+
+mySiteServices.factory('MenuService', [function() {
+    var currentPage = "Home";
+
+    var setPage = function(newPageName) {
+        currentPage = newPageName;
+    }
+
+    var getPage = function() {
+        return currentPage;
+    }
+
+    return {
+        setPage: setPage,
+        getPage: getPage
+    };
+ }]);

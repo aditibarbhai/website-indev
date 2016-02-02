@@ -1,10 +1,11 @@
 // fonts
 .handwriting {
-    font-family: Pacifico, Arial, Helvetica, sans-serif;
+    font-family: 'Pacifico', cursive !important;
 }
 
 // page styles
 body {
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
 
@@ -16,14 +17,42 @@ body {
 	text-align: center;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 header {
 	.mdl-navigation {
 		.mdl-navigation__link {
 			&:hover {
 				border-bottom: 3px solid yellow;
 			}
+
+            &.selected {
+                border-bottom: 3px solid yellow;
+            }
 		}
 	}
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.mdl-layout__drawer {
+    .mdl-navigation {
+        .mdl-navigation__link {
+            &:hover {
+                background-color: #D7D6D6;
+            }
+
+            &.selected {
+                background-color: #D7D6D6;
+            }
+        }
+    }
+    
 }
 
 footer { 
@@ -32,8 +61,21 @@ footer {
 
 .wrapper {
     margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
+    h1, h2, h3, h4, h5, h6, p, a, span, div, ul, li {
+        // font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    p, a, span, div, ul, li, table {
+        font-size: 16px;
+    }
     
     .mdl-layout__content {
+        font-family: 'Open Sans', sans-serif;
+        
         .back {
             margin-top: 11vh;
             position: fixed;
@@ -42,8 +84,8 @@ footer {
         
         .ribbon {
             width: 100vw;
-            height: 40vh;
-            background-color: #3F51B5;
+            height: 55vh;
+            background-color: #99A5EA;
         }
         .page-content {
             margin: 0 auto;
@@ -53,7 +95,7 @@ footer {
             width: 65vw;
             background-color: #fff;
             padding: 80px 60px;
-            margin-top: -33vh;
+            margin-top: -47vh;
         }
 
         .mdl-grid {
@@ -70,7 +112,22 @@ footer {
                     margin-left: 1vw;
                     position: absolute;
                     bottom: 0;
+
+                    a {
+                        background-color: #DDE0F3;
+                        padding: 3px 7px;
+                    }
                 }
+            }
+
+            .card-square.mdl-card {
+              width: 320px;
+              height: 320px;
+            }
+            .card-square > .mdl-card__title {
+              color: #fff;
+              background:
+                url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
             }
         }
         
@@ -90,6 +147,52 @@ footer {
             .content {
                 padding: 50px;
             }
+        }
+    }
+
+    .card-wide.mdl-card {
+        width: 100%;
+        max-width: 60vw;
+        margin: 20px 0;
+        padding: 20px;
+
+        &.blurb {
+            border-left: rgb(63,81,181) solid 10px;
+            min-height: 100px;
+        }
+        
+        &.education {
+            border-left: rgb(255,64,129) solid 10px;
+            .mdl-card__supporting-text {
+                margin-top: 0;
+            }
+        }
+
+        &.tech-stack {
+            border-left: #4caf50 solid 10px;
+        }
+
+        &.work-experience {
+            border-left: #007105 solid 10px;
+        }
+
+        .mdl-card__title, .mdl-card__supporting-text {
+            padding: 0;
+            width: 100%;
+        }
+
+        .mdl-card__supporting-text {
+            color: rgb(103, 105, 113);
+            margin-top: 15px;
+        }
+
+        .subtitle {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+
+        h2, h5, h6 {
+            font-weight: 500;
         }
     }
 }

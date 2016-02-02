@@ -3,7 +3,7 @@ mySite.controller('PortfolioController', ['$scope', 'PortfolioService', function
     $scope.projects = PortfolioService.getPortfolio();
 
     $(".mdl-navigation").children().removeClass("selected");
-    $(".projects-page").addClass("selected");
+    $(".portfolio-link").addClass("selected");
 }]);
 
 mySite.controller("ProjectDetailsController", ['$scope', '$sce', 'PortfolioService', '$routeParams', function($scope, $sce, PortfolioService, $routeParams) {
@@ -12,7 +12,7 @@ mySite.controller("ProjectDetailsController", ['$scope', '$sce', 'PortfolioServi
   $scope.content = $sce.trustAsHtml($scope.project.content);
 
   $(".mdl-navigation").children().removeClass("selected");
-  $(".projects-page").addClass("selected");
+  $(".portfolio-link").addClass("selected");
 }]);
 
 mySite.directive('projectTile', function() {
